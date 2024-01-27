@@ -1,25 +1,20 @@
-index:
-  path: /
-  controller: App\Controller\DefaultController::index
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
 
 # page d'accueil
 home:
-  path: /home
-  controller: App\Controller\DefaultController::home
-
-# blog
-blog:  
-  path: /blog
-  controller: App\Controller\DefaultController::blog
+  path: /menu
+  controller: App\Controller\MenuController::index
 
 # section pour naviguer à travers les articles
 articles:
   path: /articles
-  controller: App\Controller\DefaultController::articles
+  controller: App\Controller\ArticleController::index
 
 # section pour naviguer à travers les catégories      
 categories:
   path: /categories
-  controller: App\Controller\DefaultController::categories      
+  controller: App\Controller\CategoryController::index     
 
  
