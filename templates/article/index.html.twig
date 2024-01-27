@@ -3,10 +3,10 @@
 {% block title %}Article index{% endblock %}
 
 {% block body %}
-    <h1 class="alert alert-warning" >Article index</h1>
+    <h1 class="alert alert-primary text-center" >Articles index</h1>
 
     <table class="table">
-        <thead>
+        <thead class="table-info text-dark fw-bold">
             <tr>
                 <th>Id</th>
                 <th>Title</th>
@@ -15,7 +15,7 @@
                 <th>actions</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="align-middle ">
         {% for article in articles %}
             <tr>
                 <td>{{ article.id }}</td>
@@ -25,10 +25,10 @@
                         {{ article.Category.name }}
                     {% endif %}
                 </td>
-                <td>{{ article.content }}</td>
+                <td class="fst-italic">{{ article.content }}</td>
                 <td>
-                    <a href="{{ path('article_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('article_show', {'id': article.id}) }}">show</a>
+                    <a class="btn btn-primary" href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -38,6 +38,7 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('article_new') }}">Create new</a>
+    <div class="d-flex justify-content-center">
+        <a class="btn btn-outline-primary btn-lg" href="{{ path('article_new') }}">Create new article</a>
+    </div>
 {% endblock %}
