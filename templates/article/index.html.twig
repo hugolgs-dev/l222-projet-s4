@@ -28,7 +28,7 @@
                 <td class="fst-italic">{{ article.content }}</td>
                 <td>
                     <a class="btn btn-primary" href="{{ path('article_show', {'id': article.id}) }}">show</a>
-                    <a class="btn btn-primary" href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
+                    <a class="btn btn-warning text-white" href="{{ path('article_edit', {'id': article.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
