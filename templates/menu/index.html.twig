@@ -1,7 +1,9 @@
+{# menu/index.html.twig #}
+
 <nav>
     <ul>
-        {% for label, url in menu_composant %}
-            <li><a href="{{ url }}">{{ label }}</a></li>
-        {% endfor %}
+        <li><a href="{{ path('article_index') }}">Articles</a></li>
+        <li><a href="{{ path('category_index') }}">Categories</a></li>
+        {# Add more links as needed #}
     </ul>
 </nav>

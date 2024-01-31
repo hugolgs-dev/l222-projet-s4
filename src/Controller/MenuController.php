@@ -8,23 +8,15 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MenuController  extends AbstractController
 {
-    #[Route('/menu')]
-     
-    public function index(): Response
+    #[Route('/menu', name:'menu')]
+    /*   
+    public function redirectToArticle(): Response
     {
-        
-        $menu_composant = 
-        [
-            'Accueil' => $this->generateUrl('home'),
-            'Blog' => $this->generateUrl('blog'),
-            'Articles' => $this->generateUrl('articles'),
-            'Catégories' => $this->generateUrl('categories'),
-            
-        ];
-
-        return $this->render('menu/index.html.twig', [
-            'menu_composant' => $menu_composant,
-            
-        ]);
+        return $this->redirectToRoute('article_index');
+    }
+    */
+    public function Menu(): Response
+    {
+        return $this->render('menu/index.html.twig');
     }
 }
