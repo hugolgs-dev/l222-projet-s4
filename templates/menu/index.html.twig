@@ -1,9 +1,9 @@
 {# menu/index.html.twig #}
 
-<nav class="nav-test">
-    <ul>
-        <li><a href="{{ path('article_index') }}">Articles</a></li>
-        <li><a href="{{ path('category_index') }}">Categories</a></li>
-        {# Add more links as needed #}
+<nav>
+    <ul class="menu-liste">
+        <li class="menu-liste-items btn"><a href="{{ path('article_index') }}">Articles</a></li>
+        <li class="menu-liste-items btn"><a href="{{ path('category_index') }}">Categories</a></li>
     </ul>
+    <button class="btn btn-dark theme-switch" id="themeToggleBtn">Mode sombre</button>
 </nav>

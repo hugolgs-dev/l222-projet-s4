@@ -1,3 +1,47 @@
-.nav-test{
-    background-color: red;
-}    
+:root{
+    --light: #ffffff;
+    --dark: #27334d;
+    --grey: #d4e0fa;
+}
+
+body.light-theme {
+    background-color: var(--light);
+    color: var(--dark);
+    transition: 0.5s;
+}
+
+body.dark-theme {
+    background-color: var(--dark);
+    color: var(--light) !important;
+    transition: .5s;
+}
+
+/* style de la page */
+
+nav{
+    display: flex;
+    flex: row nowrap ;
+    width: 100%;
+}
+.menu-liste{
+    display: flex;
+    flex: row nowrap ;
+    justify-content: space-between;
+
+    list-style: none;
+}
+
+
+
+.theme-switch{
+    align-self: flex-end;
+}
+
+/* transitions */
+/* message de chargement de la page */
+
+th:hover{
+    background-color: var(--grey);
+}
+
+/************************/
