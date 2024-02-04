@@ -7,7 +7,7 @@
 body.light-theme {
     background-color: var(--light);
     color: var(--dark);
-    transition: 0.5s;
+    transition: .5s;
 }
 
 body.dark-theme {
@@ -18,28 +18,34 @@ body.dark-theme {
 
 /* style de la page */
 
-nav{
+.header{
     display: flex;
     flex: row nowrap ;
     width: 100%;
+    align-items: center;
+}
+
+.nav{
+    display: block;
+    width: 90%;
 }
 .menu-liste{
     display: flex;
     flex: row nowrap ;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     list-style: none;
 }
 
+.menu-liste-items{
+    margin: 0.5rem 1rem 0;
+}
 
+.btn-menu{
 
-.theme-switch{
-    align-self: flex-end;
 }
 
 /* transitions */
-/* message de chargement de la page */
-
 th:hover{
     background-color: var(--grey);
 }
