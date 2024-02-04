@@ -9,6 +9,7 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h1 class="mt-6 mb-4">Recherche d'articles</h1>
+                {# Formulaire de recherche #}
                 {{ form_start(form, {'attr': {'class': 'form-inline'}}) }}
                 <div class="input-group mb-3">
                     {{ form_widget(form.title, {'attr': {'class': 'form-control', 'placeholder': 'Entrer le titre'}}) }}
@@ -17,9 +18,11 @@
                     </div>
                 </div>
                 {{ form_end(form) }}
+                {# Vérification articles trouvés #}
                 {% if articles is not empty %}
                     <h2 class="mt-6">Les résultats</h2>
                     <div class="list-group">
+                        {# Boucle for pour les articles trouvés #}
                         {% for article in articles %}
                             <div class="list-group-item">
                                 <h5 class="mb-1">{{ article.title }}</h5>
@@ -27,8 +30,9 @@
                             </div>
                         {% endfor %}
                     </div>
+                {# Message si aucun articles #}
                 {% else %}
-                    <h2 class="mt-6">Aucun résultats : </h2>
+                    <h2 class="mt-6">Aucun résultats </h2>
                 {% endif %}
             </div>
         </div>
