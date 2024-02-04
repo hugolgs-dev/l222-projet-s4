@@ -14,10 +14,12 @@ class ArticleSearchType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            // Champs de saisie du titre de l'article
             ->add('title', TextType::class, [
                 'label' => 'Title',
                 'required' => TRUE, 
             ])
+            // Bouton soumission formulaire 
             ->add('search', SubmitType::class, [ 
                 'label' => 'Search',
             ]);
