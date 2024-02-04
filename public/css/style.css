@@ -4,6 +4,7 @@
     --grey: #d4e0fa;
 }
 
+/* styles pour le changement de thème */
 body.light-theme {
     background-color: var(--light);
     color: var(--dark);
