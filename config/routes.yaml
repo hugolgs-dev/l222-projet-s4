@@ -17,4 +17,7 @@ categories:
   path: /categories
   controller: App\Controller\CategoryController::index     
 
- 
+ # section pour la recherche d'articles
+article_search:
+    path: /search
+    controller: App\Controller\ArticleSearchController::index
