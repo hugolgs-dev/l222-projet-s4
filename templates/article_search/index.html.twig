@@ -1,0 +1,36 @@
+{# templates/article_search/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Article Search{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="mt-6 mb-4">Recherche d'articles</h1>
+                {{ form_start(form, {'attr': {'class': 'form-inline'}}) }}
+                <div class="input-group mb-3">
+                    {{ form_widget(form.title, {'attr': {'class': 'form-control', 'placeholder': 'Entrer le titre'}}) }}
+                    <div class="input-group-append">
+                        {{ form_widget(form.search, {'attr': {'class': 'btn btn-primary'}}) }}
+                    </div>
+                </div>
+                {{ form_end(form) }}
+                {% if articles is not empty %}
+                    <h2 class="mt-6">Les résultats</h2>
+                    <div class="list-group">
+                        {% for article in articles %}
+                            <div class="list-group-item">
+                                <h5 class="mb-1">{{ article.title }}</h5>
+                                <p class="mb-1">{{ article.content }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <h2 class="mt-6">Aucun résultats : </h2>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
